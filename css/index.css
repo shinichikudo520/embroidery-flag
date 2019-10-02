@@ -1,0 +1,2637 @@
+@charset "UTF-8";
+
+/*公共样式*/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+s dl,
+dt,
+dd,
+a,
+img,
+textarea,
+input,
+span,
+button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+
+img,
+div {
+    display: block;
+    border: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h2,
+h1,
+h3,
+h4,
+h5,
+strong,
+b,
+i,
+em {
+    font-weight: normal;
+    /* font-size:12px ; */
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea {
+    font-family: "font-family";
+    -webkit-border: none;
+    -o-border: none;
+    border: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    outline: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #aaa;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #aaa;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #aaa;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #aaa;
+}
+
+.hide {
+    display: none;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+body {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+body .broadcast-icon {
+    display: block;
+    width: 8%;
+    position: absolute;
+    top: 4%;
+    left: 87%;
+}
+
+body .hechengPage {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+body .hechengPage .bg {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body .hechengPage .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .hechengPage .wish_70 {
+    position: absolute;
+    width: 14%;
+    top: 6.5%;
+    left: 36.5%;
+}
+
+body .hechengPage .wish_zhou {
+    position: absolute;
+    width: 12%;
+    top: 5.5%;
+    left: 49.5%;
+}
+
+body .hechengPage .wish_nian {
+    position: absolute;
+    width: 8.3%;
+    top: 6.2%;
+    left: 56.5%;
+}
+
+body .hechengPage .wish_title {
+    position: absolute;
+    width: 72%;
+    top: 13%;
+    left: 13.5%;
+}
+
+.text_congratulation {
+    position: absolute;
+    top: 8%;
+    width: 28%;
+    left: 7%;
+}
+
+body .hechengPage .stars {
+    margin-top: 160%;
+}
+
+body .hechengPage .stars .star1 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 8%;
+}
+
+body .hechengPage .stars .star2 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 13%;
+}
+
+body .hechengPage .stars .star3 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 18%;
+}
+
+body .hechengPage .stars .star4 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 23%;
+}
+
+body .hechengPage .stars .star5 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 28%;
+}
+
+body .hechengPage .stars .rectangle {
+    position: absolute;
+    width: 29.5%;
+    height: 1.5%;
+    top: 22.5%;
+    left: 35.5%;
+    background-color: #fdaf58;
+}
+
+body .hechengPage .stars .star6 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 69%;
+}
+
+body .hechengPage .stars .star7 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 74%;
+}
+
+body .hechengPage .stars .star8 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 79%;
+}
+
+body .hechengPage .stars .star9 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 84%;
+}
+
+body .hechengPage .stars .star10 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 89%;
+}
+
+body .hechengPage #hecheng_textarea {
+    color: #000;
+    position: absolute;
+    top: 28.5%;
+    left: 11%;
+    width: 77%;
+    height: 22%;
+    font-size: 16px;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+    font-weight: 700;
+    text-indent: 2em;
+    background-color: transparent;
+    resize: none;
+}
+
+body .hechengPage .name span {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    font-size: 13px;
+    color: #806563;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+}
+
+body .hechengPage .date {
+    position: absolute;
+    top: 54%;
+    right: -63%;
+    font-size: 13px;
+    color: #806563;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+}
+
+body .hechengPage .text {
+    position: absolute;
+    top: 89.5%;
+    left: 9%;
+    width: 33%;
+}
+
+body .hechengPage .erweima {
+    position: absolute;
+    top: 80.5%;
+    left: 67%;
+    width: 25%;
+}
+
+body .loadingPage .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .loadingPage .bg img {
+    height: 100%;
+}
+
+body .loadingPage .zhuangshi {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+
+body .loadingPage .tiananmen {
+    position: relative;
+    width: 31%;
+    margin: 67% auto 0;
+}
+
+body .loadingPage .load .loader-container {
+    height: 100%;
+    width: 0%;
+    background: -webkit-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -moz-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -o-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -ms-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: linear-gradient(left, #f8dc4b, #d95a3d);
+    border-radius: 7px;
+    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+body .loadingPage .load .progress {
+    position: relative;
+    margin: 0% auto 0;
+    width: 52%;
+    height: 9px;
+    border-radius: 7px;
+    background: -webkit-linear-gradient(left, #4f0909, #4f0909);
+    background: -moz-linear-gradient(left, #4f0909, #4f0909);
+    background: -o-linear-gradient(left, #4f0909, #4f0909);
+    background: -ms-linear-gradient(left, #4f0909, #4f0909);
+    background: linear-gradient(left, #4f0909, #4f0909);
+}
+
+body .loadingPage .load .loader {
+    -webkit-animation: loader 2.5s linear;
+    -o-animation: loader 2.5s linear;
+    animation: loader 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes loader {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes loader {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+body .loadingPage .load p {
+    color: #fdb059;
+    font-family: 思源宋体 CN;
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+/* 主办企业 */
+
+body .corporation_Page .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .corporation_Page .bg img {
+    height: 100%;
+}
+
+body .corporation_Page .zhuangshi {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+
+body .indexPage .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .indexPage .bg img {
+    height: 100%;
+}
+
+body .indexPage .flag {
+    position: absolute;
+    width: 100%;
+    top: 22%;
+    left: 1.5%;
+}
+
+body .indexPage .tiananmen {
+    position: absolute;
+    width: 100%;
+    top: 41%;
+    left: 0%;
+}
+
+body .indexPage .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .title .text_congratulation {
+    position: absolute;
+    width: 28%;
+    top: 8%;
+    left: 6%;
+    font-size: 1.875rem;
+    color: #fdecc7;
+}
+
+body .title .seven {
+    position: absolute;
+    width: 18%;
+    top: 6%;
+    left: 36%;
+}
+
+
+/* body .indexPage .title .zero {
+  position: absolute;
+  width: 11%;
+  top: 6%;
+  left: 47%;
+  -webkit-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+} */
+
+body .title .zhou {
+    position: absolute;
+    width: 20%;
+    top: 3.5%;
+    left: 54%;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+body .title .nian {
+    position: absolute;
+    width: 15%;
+    top: 4.5%;
+    left: 67%;
+    -webkit-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+body .title .songzhufu {
+    position: absolute;
+    width: 40%;
+    top: 17%;
+    left: 52%;
+    font-style: italic;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    font-size: 1.25rem;
+    color: #fdecc7;
+}
+
+body .indexPage .footer {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 5.6%;
+}
+
+body .indexPage .btn button {
+    height: 126%;
+    /* background-size: 100% 95%; */
+}
+
+body .indexPage .btn {
+    position: absolute;
+    width: 47%;
+    top: 80%;
+    left: 28%;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+body .indexPage .text {
+    position: absolute;
+    width: 32%;
+    top: 79%;
+    left: 33.5%;
+}
+
+body .indexPage .guangdian {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 0%;
+}
+
+
+/* 首页总冠名 */
+
+body .indexPage .named {
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 0%;
+    text-align: center;
+    font-size: 1.875rem;
+    color: #f4d19b;
+}
+
+body .indexPage .named img {
+    width: 40%;
+    /* height: 20%; */
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body .enterprisePage .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .enterprisePage .bg img {
+    height: 100%;
+}
+
+body .enterprisePage .title {
+    position: absolute;
+    width: 61%;
+    top: 0%;
+    left: 19.5%;
+}
+
+body .enterprisePage .title::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 28%;
+    top: 40%;
+    left: 0%;
+    opacity: 0;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    animation: run 1s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+@-webkit-keyframes run {
+    0% {
+        left: 0%;
+        transition: left 1s linear 0s;
+        opacity: 1;
+    }
+    100% {
+        left: 90%;
+        transition: left 1s linear 0s;
+        opacity: 0;
+    }
+}
+
+body .enterprisePage .tiananmen {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .enterprisePage .tuanhui {
+    position: absolute;
+    width: 35%;
+    top: 56%;
+    left: 33%;
+}
+
+body .enterprisePage .enterprises {
+    position: absolute;
+    width: 92%;
+    top: 46%;
+    left: 4%;
+    /* float: left; */
+    /* display: flex; */
+    height: 41%;
+    overflow-y: hidden;
+}
+
+body .enterprisePage .enterprises ul li {
+    float: left;
+    display: inline-block;
+    width: 21%;
+    margin-left: 9%;
+    margin-top: 4%;
+}
+
+body .enterprisePage .btn {
+    position: absolute;
+    width: 40%;
+    top: 89%;
+    left: 30.5%;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+
+/* PatrioticCompanies */
+
+body .PatrioticCompanies {
+    overflow: auto;
+}
+
+body .PatrioticCompanies .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .PatrioticCompanies .bg img {
+    height: 100%;
+}
+
+body .PatrioticCompanies .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .PatrioticCompanies .xiu_70 {
+    position: absolute;
+    width: 14%;
+    top: 6.5%;
+    left: 36.5%;
+}
+
+body .PatrioticCompanies .xiu_zhou {
+    position: absolute;
+    width: 12%;
+    top: 5.5%;
+    left: 49.5%;
+    -webkit-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+body .PatrioticCompanies .xiu_nian {
+    position: absolute;
+    width: 8.3%;
+    top: 6.2%;
+    left: 56.5%;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+body .PatrioticCompanies .xiu_title {
+    position: absolute;
+    width: 74%;
+    top: 13.5%;
+    left: 13.5%;
+    -webkit-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+body .PatrioticCompanies .xiu_title::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 97%;
+    top: -2%;
+    left: 0%;
+    opacity: 0;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    animation: run2 1s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+body .PatrioticCompanies .btn {
+    position: absolute;
+    width: 37%;
+    top: 89%;
+    left: 31%;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+
+/* 爱国企业表格内容部分 */
+
+
+/* 主体样式 */
+
+body .PatrioticCompanies .enterprise {
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    top: 22%;
+    /* background-color: #FFF100; */
+    /* font-family: '微软雅黑'; */
+    /* font-weight: 700; */
+    overflow: hidden;
+    color: #fedaa3;
+}
+
+
+/* 顶部 */
+
+body .PatrioticCompanies .enterprise .top {
+    /* text-align: center; */
+    padding-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+/* 针 图片 */
+
+body .PatrioticCompanies .enterprise .top img {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin: 0 auto;
+}
+
+
+/* 内容 */
+
+body .PatrioticCompanies .enterprise .content {
+    height: 75%;
+    /* 内容滚动 */
+    overflow: auto;
+}
+
+
+/* 表格 */
+
+body .enterprisePage table {
+    width: 90%;
+    margin: 0 auto;
+    font-size: .75rem;
+    color: #FF1600;
+    position: absolute;
+}
+
+body .enterprisePage table td {
+    line-height: 2;
+    height: 2.625rem;
+}
+
+
+/* 表格第一列 */
+
+body .enterprisePage .firstTd {
+    text-align: left;
+    width: 25%;
+}
+
+
+/* 表格第二列 */
+
+body .enterprisePage .secondTd {
+    width: 45%;
+    text-align: right;
+    font-weight: 400;
+}
+
+
+/* 第二列的进度条 */
+
+body .enterprisePage .progress {
+    /* height: 100px; */
+    /* line-height: 100%; */
+    /* height: .75rem;
+  border-radius: .3125rem;
+  display: inline-block;
+  background: -webkit-gradient(linear,left top, right top,color-stop(10%,#FFF900 ),to(#FF1B00)) !important; */
+    /* background: linear-gradient(right,#FF1B00 30%,#FFF900x  ) */
+}
+
+body .enterprisePage .loader-container {
+    height: 100%;
+    width: 72%;
+    background: -webkit-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -moz-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -o-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: -ms-linear-gradient(left, #f8dc4b, #d95a3d);
+    background: linear-gradient(left, #f8dc4b, #d95a3d);
+    border-radius: 7px;
+    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+body .enterprisePage .progress {
+    width: 57%;
+    height: 7px;
+    display: inline-block;
+    border-radius: 7px;
+    background: -webkit-linear-gradient(left, #4f0909, #4f0909);
+    background: -moz-linear-gradient(left, #4f0909, #4f0909);
+    background: -o-linear-gradient(left, #4f0909, #4f0909);
+    background: -ms-linear-gradient(left, #4f0909, #4f0909);
+    background: linear-gradient(left, #4f0909, #4f0909);
+}
+
+
+/* 第二列的 |  */
+
+body .enterprisePage .secondTd span {
+    color: #FF7100;
+    font-weight: 400;
+    font-size: .875rem;
+}
+
+
+/* 第三列的按钮 */
+
+body .enterprisePage .thirdTd {
+    width: 22%;
+}
+
+body .enterprisePage .thirdTd button {
+    background-color: #FF0000;
+    color: #FFF600;
+    font-size: .5rem;
+    border: .0625rem solid #000000;
+    border-radius: 1.25rem;
+    line-height: 1.5;
+    width: 100%;
+    /* margin-left: 10%; */
+}
+
+
+/* 完整红旗页 */
+
+
+/* completeFlag */
+
+body .completeFlag .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .completeFlag .bg img {
+    height: 100%;
+}
+
+body .completeFlag .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .completeFlag .border .kuang {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .completeFlag .border .kuang_bg {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .completeFlag .border .xiu_flag {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .completeFlag .border .kuangbg {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+
+/* body .completeFlag .xiu_text {
+  position: absolute;
+  width: 32%;
+  top: 62%; 
+  left: 33.5%;
+} */
+
+body .completeFlag .xiu_number {
+    position: absolute;
+    width: 70%;
+    top: 62%;
+    left: 17%;
+}
+
+body .completeFlag .xiu_number .input0 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 4.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+
+/* 选中的歌词行 */
+
+body .on {
+    color: #f8edeb;
+}
+
+body .completeFlag .xiu_number .input1 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 14.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input2 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 24.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input3 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 35.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input4 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 46%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input5 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 56.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input6 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 67%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input7 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 78%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .completeFlag .xiu_number .input8 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 88%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .btn {
+    position: absolute;
+    width: 37%;
+    height: 7%;
+    top: 92%;
+    left: 31%;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+body .btn button {
+    background: url('../images/btnBg.png') 0 0 no-repeat;
+    background-size: 100% 95%;
+    height: 100%;
+    width: 100%;
+    font-size: .8125rem;
+    color: #fef5ed;
+}
+
+
+/* 完整红旗页结束 */
+
+
+/* xiuPage */
+
+body .xiuPage .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .xiuPage .bg img {
+    height: 100%;
+}
+
+body .xiuPage .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .xiuPage .xiu_70 {
+    position: absolute;
+    width: 14%;
+    top: 6.5%;
+    left: 36.5%;
+}
+
+body .xiuPage .xiu_zhou {
+    position: absolute;
+    width: 12%;
+    top: 5.5%;
+    left: 49.5%;
+    -webkit-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+body .xiuPage .xiu_nian {
+    position: absolute;
+    width: 8.3%;
+    top: 6.2%;
+    left: 56.5%;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+body .xiuPage .xiu_title {
+    position: absolute;
+    width: 74%;
+    top: 13.5%;
+    left: 13.5%;
+    -webkit-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+body .xiuPage .xiu_title::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 97%;
+    top: -2%;
+    left: 0%;
+    opacity: 0;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    animation: run2 1s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes run2 {
+    0% {
+        left: 0%;
+        transition: left 1s linear 0s;
+        opacity: 1;
+    }
+    100% {
+        left: 90%;
+        transition: left 1s linear 0s;
+        opacity: 0;
+    }
+}
+
+body .xiuPage .border .kuang {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .border .kuang_bg {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .border .xiu_flag2 {
+    position: absolute;
+    width: 68%;
+    top: 24.7%;
+    left: 15.5%;
+}
+
+body .xiuPage .border .xiuzhen {
+    position: absolute;
+    width: 50%;
+    top: 1%;
+    left: 60.5%;
+}
+
+body .xiuPage .border .xiu_flag {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .border .border_zhezhao {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .border .border_zhezhao .yuan {
+    position: absolute;
+    width: 27%;
+    top: 20%;
+    left: 36.5%;
+}
+
+body .xiuPage .border .guangxiao {
+    position: absolute;
+    width: 87%;
+    top: 23%;
+    height: 33%;
+    left: 7%;
+}
+
+body .xiuPage .border .border_zhezhao .xiaoshou {
+    position: absolute;
+    width: 15%;
+    top: 54%;
+    left: 54.5%;
+    animation: animX 4s cubic-bezier(0.36, 0, 0.64, 1) -2s infinite alternate, animY 4s cubic-bezier(0.36, 0, 0.64, 1) 0s infinite alternate;
+}
+
+body .xiuPage .border .border_zhezhao .failed {
+    position: absolute;
+    width: 22%;
+    top: 72%;
+    left: 38.5%;
+}
+
+body .xiuPage .border .border_zhezhao .huaquan {
+    position: absolute;
+    width: 59%;
+    top: 47%;
+    left: 20.5%;
+}
+
+body .xiuPage .border .kuangbg {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .border .mengceng {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+    height: 38%;
+}
+
+@keyframes animX {
+    0% {
+        left: 35%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@keyframes animY {
+    0% {
+        top: 20%;
+    }
+    100% {
+        top: 55%;
+    }
+}
+
+
+/* body .xiuPage .xiu_text {
+  position: absolute;
+  width: 32%;
+  top: 62%; 
+  left: 33.5%;
+} */
+
+body .xiuPage .xiu_number {
+    position: absolute;
+    width: 70%;
+    top: 62%;
+    left: 14%;
+}
+
+body .xiuPage .xiu_number .input0 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 4.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input1 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 14.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input2 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 24.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input3 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 35.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input4 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 46%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input5 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 56.5%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input6 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 67%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input7 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 78%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+body .xiuPage .xiu_number .input8 {
+    color: #fffab8;
+    font-family: 思源宋体 CN;
+    position: absolute;
+    top: 33%;
+    left: 88%;
+    background-color: transparent;
+    width: 9%;
+    height: 33%;
+    font-size: 23px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+
+/* body .xiuPage .btn {
+  position: absolute;
+  width: 37%;
+  height: 7%;
+  top: 91%;
+  left: 31%;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+body .xiuPage .btn  button{
+  background: url('../images/btnBg.png') 0 0 no-repeat;
+  background-size:cover;
+  height: 100%;
+  width: 100%;
+  font-size: 1.0625rem;
+  color: #fef5ed;
+
+} */
+
+body .xiuPage .zhezhaoceng {
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 12;
+}
+
+body .xiuPage .zhezhaoceng .kuang2 {
+    position: absolute;
+    width: 89%;
+    top: 23.4%;
+    left: 5.5%;
+}
+
+body .xiuPage .zhezhaoceng .zhezhao_text1 {
+    color: #fdb059;
+    position: absolute;
+    /* width: 38%; */
+    top: 34%;
+    left: 29.5%;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+    font-size: 17px;
+}
+
+body .xiuPage .zhezhaoceng .zhezhao_text2 {
+    color: #fdb059;
+    position: absolute;
+    /* width: 38%; */
+    top: 38%;
+    left: 19.5%;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+    font-size: 17px;
+    -webkit-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+body .xiuPage .zhezhaoceng .queren {
+    position: absolute;
+    width: 38%;
+    top: 44%;
+    left: 10.5%;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+body .xiuPage .zhezhaoceng .invite {
+    position: absolute;
+    width: 38%;
+    top: 44%;
+    left: 53%;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+body .fenxiang_Page {
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 12;
+}
+
+body .fenxiang_Page img {
+    position: absolute;
+    width: 62%;
+    top: 0%;
+    right: 0;
+}
+
+body .wishPage {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+body .wishPage .bg {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body .wishPage .zhuangshi {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+body .wishPage .wish_70 {
+    position: absolute;
+    width: 14%;
+    top: 6.5%;
+    left: 36.5%;
+}
+
+body .wishPage .wish_zhou {
+    position: absolute;
+    width: 12%;
+    top: 5.5%;
+    left: 49.5%;
+    -webkit-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+body .wishPage .wish_nian {
+    position: absolute;
+    width: 8.3%;
+    top: 6.2%;
+    left: 56.5%;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+body .wishPage .wish_title {
+    position: absolute;
+    width: 72%;
+    top: 13%;
+    left: 13.5%;
+    -webkit-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+body .wishPage .wish_title::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 97%;
+    top: -2%;
+    left: 0%;
+    opacity: 0;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+    animation: run2 1s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes run2 {
+    0% {
+        left: 0%;
+        transition: left 1s linear 0s;
+        opacity: 1;
+    }
+    100% {
+        left: 90%;
+        transition: left 1s linear 0s;
+        opacity: 0;
+    }
+}
+
+body .wishPage .stars {
+    margin-top: 160%;
+}
+
+body .wishPage .stars .star1 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 8%;
+}
+
+body .wishPage .stars .star2 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 13%;
+}
+
+body .wishPage .stars .star3 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 18%;
+}
+
+body .wishPage .stars .star4 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 23%;
+}
+
+body .wishPage .stars .star5 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 28%;
+}
+
+body .wishPage .stars .rectangle {
+    position: absolute;
+    width: 29.5%;
+    height: 1.5%;
+    top: 22.5%;
+    left: 35.5%;
+    background-color: #fdaf58;
+}
+
+body .wishPage .stars .star6 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 69%;
+}
+
+body .wishPage .stars .star7 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 74%;
+}
+
+body .wishPage .stars .star8 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 79%;
+}
+
+body .wishPage .stars .star9 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 84%;
+}
+
+body .wishPage .stars .star10 {
+    position: absolute;
+    width: 3.5%;
+    top: 22%;
+    left: 89%;
+}
+
+body .wishPage .text1 {
+    color: #806563;
+    position: absolute;
+    top: 28.5%;
+    left: 9%;
+    font-size: 16px;
+    font-family: 思源黑体 CN;
+    font-weight: 400;
+}
+
+body .wishPage #textarea {
+    color: #000;
+    position: absolute;
+    top: 30.5%;
+    left: 11%;
+    width: 77%;
+    height: 22%;
+    font-size: 16px;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+    font-weight: 700;
+    text-indent: 2em;
+    background-color: transparent;
+    resize: none;
+}
+
+body .wishPage .name {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    font-size: 13px;
+    color: #806563;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+}
+
+body .wishPage .name input {
+    width: 21.5%;
+    border-bottom: 1px #806563 solid;
+    color: #806563;
+    text-align: center;
+    background-color: transparent;
+}
+
+body .wishPage .date {
+    position: absolute;
+    top: 54%;
+    left: 59%;
+    font-size: 13px;
+    color: #806563;
+    font-family: 思源宋体 CN;
+    src: url("../fonts/SourceHanSerifCN-SemiBold.otf");
+}
+
+
+/* 祝福语选项 */
+
+body .wishPage .choose {
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    width: 84%;
+    font-weight: 700;
+    font-size: 16px;
+    color: #786E4D;
+    font-family: 思源黑体 CN;
+}
+
+body .wishPage ul {
+    position: absolute;
+    top: 21%;
+    left: 9%;
+    width: 82%;
+    font-size: 15px;
+    color: #786E4D;
+}
+
+body .wishPage ul li {
+    border-bottom: 2px #d97c70 solid;
+    padding: 7.5% 0%;
+}
+
+body .wishPage ul li input {
+    padding-left: 1%;
+    background-color: transparent;
+    resize: none;
+    font-size: 15px;
+    color: #786E4D;
+    width: 88%;
+}
+
+body .wishPage ul li span:nth-child(1) {
+    background-color: #bc1c1c;
+    color: #fff;
+    padding: 1.2% 3%;
+    font-size: 17px;
+}
+
+body .wishPage ul li span:nth-child(2) {
+    font-size: 14px;
+    padding-left: 1%;
+}
+
+body .wishPage .btn {
+    position: absolute;
+    width: 40%;
+    top: 90%;
+    left: 30%;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+body .poster {
+    position: fixed;
+    width: 100%;
+    background-color: #330603;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 11;
+}
+
+body .poster .poster_icon {
+    position: absolute;
+    width: 41%;
+    top: 39%;
+    left: 30%;
+}
+
+body .poster .poster_icon .poster_text {
+    color: #fdb059;
+    font-family: 思源宋体 CN;
+    font-size: 16px;
+    position: absolute;
+    top: 85%;
+    left: 17%;
+}
+
+body .posterPage {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+body .posterPage .posterPage_bg {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Css3实现图片保存 */
+
+.posterPage_bg {
+    -webkit-touch-callout: default;
+}
+
+body .posterPage .zhebu {
+    position: absolute;
+    width: 53%;
+    bottom: 0%;
+    left: 0%;
+}
+
+body .posterPage .text {
+    position: absolute;
+    width: 53%;
+    top: 85%;
+    left: 4%;
+}
+
+
+/* body .posterPage .bth button{
+  background-position: 5px 9px !important;
+  background-size: 90% !important;
+} */
+
+body .posterPage button {
+    background: url('../images/btnBg.png') 5px 15px no-repeat;
+    background-size: 90%;
+    /* font-size: 1.0625rem;
+  color: #fef5ed; */
+    width: 100%;
+    height: 100%;
+    font-size: .9375rem;
+    color: #fef8ef;
+    line-height: 3.5rem;
+}
+
+
+/* body .posterPage .invite_btn {
+    position: absolute;
+    width: 23%;
+    top: 90%;
+    left: 24%;
+    height: 8%;
+} */
+
+body .posterPage .wishShowBtn {
+    position: absolute;
+    width: 23%;
+    top: 90%;
+    left: 3%;
+    height: 8%;
+}
+
+body .posterPage .backIndex {
+    position: absolute;
+    width: 23%;
+    top: 90%;
+    left: 24%;
+    height: 8%;
+    /* position: absolute;
+    width: 23%;
+    top: 90%;
+    left: 45%;
+    height: 8%; */
+}
+
+
+/* body .posterPage .look_btn {
+  position: absolute;
+  width: 34.4%;
+  top: 90%;
+  left: 4%;
+} */
+
+
+/* 热力图省份文本颜色 */
+
+body .guoqi_Page text {
+    color: #996544 !important;
+    fill: #996544 !important;
+}
+
+body .guoqi_Page .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .guoqi_Page .bg img {
+    height: 100%;
+}
+
+body .guoqi_Page .title {
+    width: 74%;
+    top: 8.5%;
+    position: absolute;
+    left: 13%;
+}
+
+body .guoqi_Page .stars .star1 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 8%;
+}
+
+body .guoqi_Page .stars .star2 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 13%;
+}
+
+body .guoqi_Page .stars .star3 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 18%;
+}
+
+body .guoqi_Page .stars .star4 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 23%;
+}
+
+body .guoqi_Page .stars .star5 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 28%;
+}
+
+body .guoqi_Page .stars .rectangle {
+    position: absolute;
+    width: 29.5%;
+    height: 1.5%;
+    top: 17.5%;
+    left: 35.5%;
+    background-color: #fdaf58;
+}
+
+body .guoqi_Page .stars .star6 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 69%;
+}
+
+body .guoqi_Page .stars .star7 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 74%;
+}
+
+body .guoqi_Page .stars .star8 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 79%;
+}
+
+body .guoqi_Page .stars .star9 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 84%;
+}
+
+body .guoqi_Page .stars .star10 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 89%;
+}
+
+body .guoqi_Page .center .guoqi_btn {
+    position: absolute;
+    width: 30.5%;
+    top: 24%;
+    left: 7%;
+}
+
+body .guoqi_Page .center .map {
+    position: absolute;
+    top: 22.5%;
+    left: 4%;
+    width: 93%;
+    height: 59%;
+}
+
+body .guoqi_Page .center .map #container {
+    height: 100% !important;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 10;
+    top: 0%;
+    left: 0%;
+}
+
+body .guoqi_Page .center .map #container .highcharts-zoom-in {
+    transform: translate(26, 350) !important;
+}
+
+body .guoqi_Page .center .map #container .highcharts-zoom-out {
+    transform: translate(26, 380) !important;
+}
+
+body .guoqi_Page .center .map #container .highcharts-legend {
+    transform: translate(67, 400) !important;
+}
+
+body .guoqi_Page .center .map #container .highcharts-background {
+    fill: #f7dabf !important;
+}
+
+body .guoqi_Page .guoqi_invite {
+    position: absolute;
+    width: 34.5%;
+    top: 84%;
+    left: 7%;
+}
+
+body .guoqi_Page .guoqi_again {
+    position: absolute;
+    width: 34.8%;
+    top: 91%;
+    left: 7%;
+}
+
+
+/* 热力图省份文本颜色 */
+
+body .zhufu_Page text {
+    color: #996544 !important;
+    fill: #996544 !important;
+}
+
+body .zhufu_Page .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body .zhufu_Page .bg img {
+    height: 100%;
+}
+
+body .zhufu_Page .title {
+    width: 61%;
+    top: 8%;
+    position: absolute;
+    left: 20%;
+}
+
+body .zhufu_Page .stars .star1 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 8%;
+}
+
+body .zhufu_Page .stars .star2 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 13%;
+}
+
+body .zhufu_Page .stars .star3 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 18%;
+}
+
+body .zhufu_Page .stars .star4 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 23%;
+}
+
+body .zhufu_Page .stars .star5 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 28%;
+}
+
+body .zhufu_Page .stars .rectangle {
+    position: absolute;
+    width: 29.5%;
+    height: 1.5%;
+    top: 17.5%;
+    left: 35.5%;
+    background-color: #fdaf58;
+}
+
+body .zhufu_Page .stars .star6 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 69%;
+}
+
+body .zhufu_Page .stars .star7 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 74%;
+}
+
+body .zhufu_Page .stars .star8 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 79%;
+}
+
+body .zhufu_Page .stars .star9 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 84%;
+}
+
+body .zhufu_Page .stars .star10 {
+    position: absolute;
+    width: 3.5%;
+    top: 17%;
+    left: 89%;
+}
+
+body .zhufu_Page .center .zhufubang_btn {
+    position: absolute;
+    width: 30.5%;
+    top: 24%;
+    left: 7%;
+}
+
+body .zhufu_Page .center .map {
+    position: absolute;
+    top: 22.5%;
+    left: 4%;
+    width: 93%;
+    height: 59%;
+}
+
+body .zhufu_Page .center .map #container2 {
+    height: 100% !important;
+    /* overflow: hidden; */
+    position: absolute;
+    top: 10;
+    top: 0%;
+    left: 0%;
+}
+
+body .zhufu_Page .center .map #container2 .highcharts-zoom-in {
+    transform: translate(26, 350) !important;
+}
+
+body .zhufu_Page .center .map #container2 .highcharts-zoom-out {
+    transform: translate(26, 380) !important;
+}
+
+body .zhufu_Page .center .map #container2 .highcharts-legend {
+    transform: translate(67, 400) !important;
+}
+
+body .zhufu_Page .center .map #container2 .highcharts-background {
+    fill: #f7dabf !important;
+}
+
+body .zhufu_Page .zhufubang_invite {
+    position: absolute;
+    width: 34.5%;
+    top: 84%;
+    left: 7%;
+}
+
+body .zhufu_Page .zhufubang_again {
+    position: absolute;
+    width: 34.8%;
+    top: 91%;
+    left: 7%;
+}
+
+body .zhufu_Page .zhufubang_corporation {
+    position: absolute;
+    width: 34.8%;
+    top: 94%;
+    left: 7%;
+}
+
+body .write-popup {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body .write-popup .write-popup-box {
+    background: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 99999;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    border: 1px solid #f2f2f2;
+}
+
+body .write-popup .write-popup-box :nth-child(1) {
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+    margin-top: 2%;
+}
+
+body .write-popup .write-popup-box :nth-child(2) {
+    line-height: 2.5rem;
+    border-top: 1px solid #aaa;
+    margin-top: 2%;
+    letter-spacing: 0.3rem;
+    color: #40affe;
+    background-color: #f2f2f2;
+}
+
+
+/* 祝福语秀 */
+
+body .wishShow .bg {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 中部内容 */
+
+body .wishShow .content {
+    position: absolute;
+    top: 28%;
+    left: 0%;
+    height: 46%;
+    overflow: hidden;
+}
+
+
+/* 中部文字 */
+
+body .wishShow .content ul {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #786E4D;
+}
+
+body .wishShow .content ul li {
+    line-height: 1.5;
+    width: 79%;
+    margin-left: 10%;
+}
+
+.wishShow .content ul li .text {
+    text-indent: 2em;
+}
+
+.wishShow .content ul li .name {
+    text-align: right;
+}
+
+body .wishShow .text2 {
+    position: absolute;
+    z-index: 100;
+    width: 38%;
+    top: 78%;
+    left: 49%;
+}
+
+.highcharts-exporting-group {
+    display: none;
+}
+
+.highcharts-credits {
+    display: none;
+}
+
+
+/* 适配 */
+
+
+/* iphone6/7/8plus以下 */
+
+@media screen and (max-width:414px) {
+    body .title .songzhufu {
+        top: 18%;
+        left: 56%;
+        width: 33% !important;
+    }
+}
+
+
+/* iphone6 */
+
+@media screen and (max-width:375px) {
+    body .title .text_congratulation {
+        position: absolute;
+        top: 8%;
+        width: 28%;
+        left: 7%;
+    }
+    body .xiuPage .border .guangxiao {
+        height: 33% !important;
+    }
+    /* 适配iPhonex */
+    @media screen and (min-height:812px) {
+        body .xiuPage .border .guangxiao {
+            height: 27% !important;
+        }
+        body .wishPage #textarea {
+            top: 32.5%;
+        }
+        body .wishPage .name {
+            top: 52%;
+        }
+        body .wishPage .date {
+            top: 56%;
+        }
+    }
+}
+
+
+/* ipad */
+
+@media screen and (min-width:768px) {
+    body .title .text_congratulation {
+        position: absolute;
+        top: 8%;
+        width: 28%;
+        left: 7%;
+    }
+    body .title .songzhufu {
+        font-size: 1.875rem;
+        top: 18%;
+        left: 56%;
+        width: 33%;
+    }
+    body .completeFlag .border .kuang_bg,
+    body .completeFlag .border .xiu_flag,
+    body .completeFlag .border .kuang {
+        width: 66%;
+        left: 16.5%;
+    }
+    /* body .completeFlag .xiu_text, */
+    body .completeFlag .xiu_number {
+        top: 60% !important;
+    }
+    body .completeFlag .xiu_number div {
+        font-size: 2.4375rem !important;
+        top: 35% !important;
+    }
+    body .completeFlag .musicComponent img {
+        width: 35% !important;
+    }
+    body .completeFlag .musicComponent .lyrics {
+        height: 9.375rem !important;
+    }
+    body .completeFlag .musicComponent .lyrics ul {
+        font-size: 1rem !important;
+    }
+    body .xiuPage .border .kuang_bg,
+    body .xiuPage .border .xiu_flag2,
+    body .xiuPage .border .xiu_flag,
+    body .xiuPage .border .border_zhezhao,
+    body .xiuPage .border .kuang,
+    body .xiuPage .zhezhaoceng .kuang {
+        width: 66% !important;
+        left: 16.5%;
+    }
+    body .xiuPage .border .xiuzhen {
+        width: 35%;
+        top: 4%;
+        left: 75.5%;
+    }
+    body .xiuPage .zhezhaoceng .queren {
+        width: 24%;
+        left: 23.5%;
+    }
+    body .xiuPage .zhezhaoceng .invite {
+        width: 24%;
+    }
+    body .xiuPage .zhezhaoceng .zhezhao_text1 {
+        font-size: 1.5rem;
+        left: 36.5%;
+    }
+    body .xiuPage .zhezhaoceng .zhezhao_text2 {
+        font-size: 1.5rem;
+        left: 27.5%;
+    }
+    /* body .xiuPage .xiu_text, */
+    body .completeFlag .xiu_number {
+        top: 60% !important;
+    }
+    body .xiuPage .xiu_number div {
+        font-size: 2.4375rem !important;
+        top: 35% !important;
+    }
+    body .guoqi_Page .title {
+        top: 6.5%;
+    }
+    body .enterprisePage table {
+        font-size: 1.1875rem;
+    }
+    body .wishPage .stars {
+        margin-top: 133% !important;
+    }
+    body .wishPage .btn {
+        top: 86%;
+    }
+    body .wishShow .content ul {
+        font-size: 1.4375rem;
+    }
+    body .wishShow .text2 {
+        width: 27%;
+        left: 56%;
+    }
+    body .xiuPage .border .guangxiao {
+        height: 33% !important;
+        width: 67%;
+        left: 15%;
+    }
+    body .btn button {
+        font-size: 21px;
+    }
+}
+
+
+/* ipadPro */
+
+@media screen and (min-width:1024px) {
+    body .btn button {
+        font-size: 1.6875rem;
+    }
+    body .xiuPage .zhezhaoceng .zhezhao_text1 {
+        left: 40.5%;
+    }
+    body .xiuPage .zhezhaoceng .zhezhao_text2 {
+        left: 34.5%;
+    }
+    body .completeFlag .musicComponent {
+        left: 13.5% !important;
+    }
+    body .completeFlag .xiu_number div {
+        font-size: 2.6875rem !important;
+        top: 38% !important;
+    }
+    body .xiuPage .xiu_number div {
+        font-size: 2.6875rem !important;
+        top: 38% !important;
+    }
+    body .wishShow .content ul {
+        font-size: 1.875rem;
+    }
+    body .poster .poster_icon .poster_text {
+        left: 37%;
+    }
+    body .highcharts-title {
+        font-size: 1.875rem !important;
+    }
+    body .guoqi_Page .center .map {
+        padding-top: .625rem;
+    }
+    body .posterPage button {
+        font-size: 1.4375rem;
+    }
+    body .xiuPage .border .guangxiao {
+        width: 66%;
+        left: 15%;
+    }
+}

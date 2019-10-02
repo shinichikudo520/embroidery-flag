@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>《向祖国致敬，为祖国祝福》</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- <script src="js/jquery-1.8.2.min.js"></script> -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+
+    <script>
+        var uid;
+        //在所有事件之前完成code的获取
+        var href = window.location.href;
+        var codeIndex = href.indexOf('code');
+        if(codeIndex > -1){//已有code，已授权
+            //console.log('有code了...');
+            //返回携带code的url举例：https://xxxxx.com/wap/payOrder.html/?code=abc677adaduiadi7838&state=STATE
+            //& 符号的下标
+            var andSymbolIndex = href.indexOf('&');
+            var code = href.substring(codeIndex+5,andSymbolIndex);
+            var api = 'https://dr.beilequan.com/api/get_userinfo/?code='+code;
+            $.get(api,res=>{
+                uid = res.uid;
+            });
+        }else{//没有code，去获取授权
+            // console.log('没有code，去授权...');
+            window.location.href = 'http://dr.beilequan.com/api/r_oauth/';
+        }
+        
+    </script>
+
+    <script src="js/highmaps.js"></script>
+    <script src="js/drilldown.js"></script>
+    <script src="js/exporting.js"></script>
+    <!-- <link rel="icon" href="images/favicon.png" > -->
+    <link rel="icon" sizes="any" mask="" href="images/favicon.ico">
+
+    
+    <script src="js/img.js"></script>
+   
+</head>
+<body>
+
+
+    <!-- 合成页 -->
+   <div id="hechengPage" class="hechengPage">
+    <img class="bg" src="images/wish_bg.png" alt="">
+    
+    <div class="zhuangshi">
+          <img class="dian1" src="images/diandian1.png" alt="">
+          <img class="dian2" src="images/diandian2.png" alt="">
+   </div>
+  
+      <div class="wish_70">
+          <img src="images/seventy.png" alt="">
+      </div>
+      <div class="wish_zhou">
+          <img src="images/index_zhou.png" alt="">
+      </div>
+      <div class="wish_nian">
+          <img src="images/index_nian.png" alt="">
+      </div>
+      <div class="wish_title">
+          <img src="images/wish_title.png" alt="">
+      </div>
+      <div class="stars">
+          
+          <img class="star star1" src="images/star.png" alt="">
+          <img class="star star2" src="images/star.png" alt="">
+          <img class="star star3" src="images/star.png" alt="">
+          <img class="star star4" src="images/star.png" alt="">
+          <img class="star star5" src="images/star.png" alt="">
+          
+          <div class="rectangle">
+              <!-- 你是第<span>5596</span>位祖国的祝福者 -->
+          </div>
+
+          <img class="star star6" src="images/star.png" alt="">
+          <img class="star star7" src="images/star.png" alt="">
+          <img class="star star8" src="images/star.png" alt="">
+          <img class="star star9" src="images/star.png" alt="">
+          <img class="star star10" src="images/star.png" alt="">
+      
+      </div>
+      <!-- <div class="text1">
+          填写你的祝福...   (70字以内)
+      </div> -->
+      <div name="" id="hecheng_textarea">
+        为祖国送祝福
+      </div>
+      <div class="name"><span id='user_name'></span></div>
+      <div class="date">
+         <span class="years">2019</span>年<span class="month">5</span>月<span class="day">8</span>日
+      </div>
+     <div class="text">
+         <img src="images/hecheng_text.png" alt="">
+     </div>
+     <div class="erweima">
+         <img src="images/erweima.png" alt="">
+     </div>
+   </div>
+
+
+    <!-- loading页 -->
+   
+    <div class="loadingPage">
+        <div class="bg">
+            <img src="images/loading_bg.png" alt="">
+        </div>
+        <div class="zhuangshi">
+            <img src="images/diandian1.png" alt="">
+            <img src="images/diandian2.png" alt="">
+        </div>
+        <div class="tiananmen">
+            <img src="images/loading_tiananmen.png" alt="">
+        </div>
+
+        <div class="load">
+
+            <!--进度条-->
+            <div class="progress">
+                <div class="loader-container"></div>
+            </div>
+            <p>加载中 <span class="number">0</span>%...</p>
+
+            
+        </div>
+
+    </div>
+    <!-- 首页 --> 
+    <div class="indexPage hide">
+        <div class="bg">
+            <img src="images/bg.png" alt="">
+        </div>
+       <div class="flag">
+           <!-- <img src="images/index_flag1.png" alt=""> -->
+           <img src="images/flaging.gif" alt="">
+       </div>
+       <div class="tiananmen">
+           <img src="images/index_tiananmen.png" alt="">
+       </div>
+       <div class="zhuangshi">
+           <img src="images/diandian1.png" alt="">
+           <img src="images/diandian2.png" alt="">
+       </div>
+       
+       <div class="title">
+           <div class="text_congratulation">
+                <img src="images/jianguo_text.png" alt="">
+           </div>
+           <div class="seventy">
+                <div class="seven animated fadeInDown">
+                    <img src="images/seventy.png" alt="">
+                </div>
+                <div class="zhou animated fadeInDown">
+                    <img src="images/index_zhou.png" alt="">
+                </div>
+                <div class="nian animated fadeInDown">
+                    <img src="images/index_nian.png" alt="">
+                </div>
+           </div>
+           <div class="songzhufu subtitle animated fadeInDown">
+               <img src="images/xiangzhuguo_text.png" alt="">
+           </div>
+       </div>
+
+       <div class="footer">
+           <img src="images/index_footer.png" alt="">
+       </div>
+       <!-- <div class="btn animated pulse infinite">
+           <img src="images/index_btn.png" alt="">
+       </div> -->
+       <div class="btn  animated pulse infinite">
+            <!-- <img src="images/xiu_btn.png" alt=""> -->
+            <button>邀您一起为祖国祝福</button>
+        </div>
+	   <!-- 总冠名 -->
+	   <!-- <div class="named">
+            总冠名
+            <img src="./images/dd_logo.png" alt="">
+	   </div> -->
+       <!-- <div class="text">
+            <img src="images/index_text.png" alt="">
+       </div> -->
+      
+       <!-- <div class="people_number animated bounceIn">
+          <img src="images/tianzige.png" alt="">
+          <div class="input1">1</div>
+          <div class="input2">1</div>
+          <div class="input3">2</div>
+          <div class="input4">5</div>
+          <div class="input5">8</div>
+          <div class="input6">3</div>
+          <div class="input7">6</div>
+         
+          
+       </div> -->
+       
+      
+    </div>
+
+   
+    <!-- 企业介绍页 -->
+    <div class="enterprisePage hide">
+            <div class="bg">
+                    <img src="images/enterprise_bg.png" alt="">
+            </div>
+            <div class="title animated fadeInDown">
+                <img src="images/enterprise_title.png" alt="">
+            </div>
+            <div class="tiananmen">
+                <img src="images/enterprise_tiananmen.png" alt="">
+            </div>
+            <div class="tuanhui">
+                <img src="images/tuanhui.png" alt="">
+            </div>
+            <div class="enterprises tbl-body">
+                <!-- <ul>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/hw_logo.png" alt=""></li>
+                    <li><img src="images/yhd_logo.png" alt=""></li>
+                    <li><img src="images/yx_logo.png" alt=""></li>
+                    <li><img src="images/bd_logo.png" alt=""></li>
+                    <li><img src="images/tb_logo.png" alt=""></li>
+                    <li><img src="images/sn_logo.png" alt=""></li>
+                    <li><img src="images/dd_logo.png" alt=""></li>
+                    <li><img src="images/ama_logo.png" alt=""></li>
+                    <li><img src="images/wy_logo.png" alt=""></li>
+                    <li><img src="images/tm_logo.png" alt=""></li>
+                    <li><img src="images/xm_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    <li><img src="images/jd_logo.png" alt=""></li>
+                    
+                    
+                </ul> -->
+
+               
+                <table class="table partentTable">
+                    <!-- <tr>
+                        <td class="firstTd">
+                            <img src="images/jd_logo.png" alt="">
+                        </td>
+                        <td class="secondTd">
+                            <span>66666</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/hw_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>27632</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/yhd_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>23787</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/yx_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>23898</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/bd_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>23988</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/tb_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>65815</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/sn_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>65685</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/dd_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>615</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/ama_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>6515</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/wy_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>23983</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/tm_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>656815</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd"><img src="images/xm_logo.png" alt=""></td>
+                        <td class="secondTd">
+                            <span>23788</span>
+                            <div class="progress">
+                                    <div class="loader-container"></div>
+                             </div>
+                           
+                        </td>
+                        <td class="thirdTd">
+                            <button type="button" class="btn-primary btn-sm">为他助威</button>
+                        </td>
+                    </tr> -->
+                    
+                  
+                   
+                </table>
+            </div>
+            <div class="btn animated pulse infinite">
+                <img src="images/enterprise_btn.png" alt="">
+            </div>
+
+    </div>
+
+    <!-- 完整国旗页 -->
+    <div class="completeFlag hide">
+            <div class="bg">
+                    <img src="images/completeflag_bg.png" alt="">
+            </div>
+
+            <div class="zhuangshi">
+                    <img src="images/diandian1.png" alt="">
+                    <img src="images/diandian2.png" alt="">
+            </div>
+
+            <div class="title">
+                <div class="text_congratulation">
+                        <img src="images/jianguo_text.png" alt="">
+                </div>
+                <div class="seventy">
+                        <div class="seven animated fadeInDown">
+                            <img src="images/seventy.png" alt="">
+                        </div>
+                        <div class="zhou animated fadeInDown">
+                            <img src="images/index_zhou.png" alt="">
+                        </div>
+                        <div class="nian animated fadeInDown">
+                            <img src="images/index_nian.png" alt="">
+                        </div>
+                </div>
+                <div class="songzhufu subtitle animated fadeInDown">
+                        <img src="images/xiangzhuguo_text.png" alt="">
+                </div>
+            </div>
+
+            <div class="border">
+                    <img class="kuang_bg" src="images/kuang_bg.png" alt="">
+                    <!-- <img class="xiu_flag2" src="images/xiu_flag2.png" alt=""> -->
+                     <!-- <img class="xiuzhen hide" src="images/zhen1.png" alt=""> -->
+                    <img class="xiu_flag" src="images/guoqi.png" alt="">
+                    <!-- <div class="border_zhezhao">
+                        <img class="bg2" src="images/kuang_bg2.png" alt="">
+                        <img class="yuan" src="images/yuan.png" alt="">
+                        <img class="xiaoshou" src="images/xiaoshou.png" alt="">
+                        <img class="failed hide" src="images/failed_text.png" alt="">
+                        <img class="huaquan" src="images/huaquan_text.png" alt="">
+                    </div> -->
+                    <img class="kuang" src="images/biankuang.png" alt="">
+                   
+                   
+                </div>
+            <!-- <div class="xiu_text">
+                <img src="images/index_text.png" alt="">
+            </div> -->
+            <div class="xiu_number animated bounceIn">
+                    <img src="images/tianzige.png" alt="">
+                    <div class="input0 inputNum">1</div>
+                    <div class="input1 inputNum">1</div>
+                    <div class="input2 inputNum">1</div>
+                    <div class="input3 inputNum">2</div>
+                    <div class="input4 inputNum">5</div>
+                    <div class="input5 inputNum">8</div>
+                    <div class="input6 inputNum">3</div>
+                    <div class="input7 inputNum">3</div>
+                    <div class="input8 inputNum">3</div>
+                    <!-- <input class="input1" type="text" value="1">
+                    <input class="input2" type="text" value="1">
+                    <input class="input3" type="text" value="2">
+                    <input class="input4" type="text" value="5">
+                    <input class="input5" type="text" value="8">
+                    <input class="input6" type="text" value="3">
+                    <input class="input7" type="text" value="6"> -->
+                    
+            </div>
+            <!-- 音乐组件 -->
+            <div class="musicComponent" style="position:absolute;top: 72%;left:5.5%;">
+                <!-- 图片 -->
+                <img src="./images/musicPic.png" alt="" style="width:50%;display: inline-block;">
+                <!-- 歌词 -->
+                <div class="lyrics" style="width:45%;display: inline-block;height: 100px;overflow: hidden;">
+                    <ul id="lrclist" style="transform: translateY(64px);display: inline-block;color: #eaca9d;font-size: 14px;"><!-- 保证歌词在正中间 --> 
+                    </ul>                   
+                </div>
+            </div>
+            <div class="btn  animated pulse infinite">
+                <!-- <img src="images/xiu_btn.png" alt=""> -->
+                <button>邀您为祖国点赞</button>
+            </div>
+            <!-- <div class="zhezhaoceng hide">
+                <div class="kuang">
+                    <img src="images/biankuang.png" alt="">
+                </div>
+                <p class="zhezhao_text1 animated bounceIn">已成功为祖国绣一针</p>
+                <p class="zhezhao_text2 animated bounceIn">你是第 <span> 345783 </span> 位为祖国绣一针</p>
+                <div class="queren animated bounceInLeft">
+                    <img src="images/queren.png" alt="">
+                </div>
+                <div class="invite animated bounceInRight">
+                    <img src="images/invite_btn1.png" alt="">
+                </div>
+            </div> -->
+            
+
+    </div>
+    <!-- 绣国旗页 -->
+    <div class="xiuPage hide">
+            <div class="bg">
+                    <img src="images/xiu_bg.png" alt="">
+            </div>
+
+            <div class="zhuangshi">
+                    <img src="images/diandian1.png" alt="">
+                    <img src="images/diandian2.png" alt="">
+            </div>
+            
+            <!-- <div class="xiu_70 animated fadeInDown">
+                <img src="images/seventy.png" alt="">
+            </div>
+            <div class="xiu_zhou animated fadeInDown">
+                <img src="images/index_zhou.png" alt="">
+            </div>
+            <div class="xiu_nian animated fadeInDown">
+                <img src="images/index_nian.png" alt="">
+            </div>
+            <div class="xiu_title animated bounceInRight">
+                <img src="images/xiu_title.png" alt="">
+            </div> -->
+
+            <div class="title">
+                <div class="text_congratulation">
+                        <img src="images/jianguo_text.png" alt="">
+                </div>
+                <div class="seventy">
+                        <div class="seven animated fadeInDown">
+                            <img src="images/seventy.png" alt="">
+                        </div>
+                        <div class="zhou animated fadeInDown">
+                            <img src="images/index_zhou.png" alt="">
+                        </div>
+                        <div class="nian animated fadeInDown">
+                            <img src="images/index_nian.png" alt="">
+                        </div>
+                </div>
+                <div class="songzhufu subtitle animated fadeInDown">
+                        <img src="images/xiangzhuguo_text.png" alt="">
+                </div>
+            </div>
+
+            <!-- <div class="border">
+                    <img class="kuang_bg" src="images/kuang_bg.png" alt="">
+                    <img class="xiu_flag2" src="images/xiu_flag2.png" alt="">
+                     <img class="xiuzhen hide" src="images/zhen1.png" alt="">
+                    <img class="xiu_flag hide" src="images/xiu_flag.png" alt="">
+                    <div class="border_zhezhao">
+                        <img class="bg2" src="images/kuang_bg2.png" alt="">
+                        <img class="yuan" src="images/yuan.png" alt="">
+                        <img class="xiaoshou" src="images/xiaoshou.png" alt="">
+                        <img class="failed hide" src="images/failed_text.png" alt="">
+                        <img class="huaquan" src="images/huaquan_text.png" alt="">
+                    </div>
+                    <img class="kuang" src="images/biankuang.png" alt="">
+                   
+                   
+                </div> -->
+                <div class="border">
+                    <img class="kuang_bg" src="images/kuang_bg.png" alt="">
+                    <img class="xiu_flag2" src="images/guoqi_2.png" alt="">
+                     <img class="xiuzhen hide" src="images/zhen1.png" alt="">
+                    <img class="xiu_flag hide" src="images/xiu_flag.png" alt="">
+					
+                    <div class="border_zhezhao ">
+                        <img class="bg2" src="images/kuang_bg2.png" alt="">
+                        <img class="yuan hide" src="images/yuan.png" alt="">
+                        <img class="xiaoshou hide" src="images/xiaoshou.png" alt="">
+                        <img class="failed hide" src="images/failed_text.png" alt="">
+                        <img class="huaquan" src="images/huaquan_text.png" alt="">
+                    </div>
+					
+					<img class="guangxiao hide" src="images/yanhua.gif" />
+					
+                    <img class="kuang" src="images/biankuang.png" alt="">
+                    <div class="mengceng hide"></div>
+                   
+                   
+                </div>
+            <!-- <div class="xiu_text">
+                <img src="images/index_text.png" alt="">
+            </div> -->
+            <div class="xiu_number animated bounceIn">
+                    <img src="images/tianzige.png" alt="">
+                    <div class="input0 inputNum">1</div>
+                    <div class="input1 inputNum">1</div>
+                    <div class="input2 inputNum">1</div>
+                    <div class="input3 inputNum">2</div>
+                    <div class="input4 inputNum">5</div>
+                    <div class="input5 inputNum">8</div>
+                    <div class="input6 inputNum">3</div>
+                    <div class="input7 inputNum">3</div>
+                    <div class="input8 inputNum">3</div>
+                    <!-- <input class="input1" type="text" value="1">
+                    <input class="input2" type="text" value="1">
+                    <input class="input3" type="text" value="2">
+                    <input class="input4" type="text" value="5">
+                    <input class="input5" type="text" value="8">
+                    <input class="input6" type="text" value="3">
+                    <input class="input7" type="text" value="6"> -->
+                    
+            </div>
+            <!-- 音乐组件 -->
+            <!-- <div class="musicComponent" style="position:absolute;top: 72%;left:5.5%;">
+                <img src="./images/musicPic.png" alt="" style="width:50%;display: inline-block;">
+                <div class="lyrics" style="width:45%;display: inline-block;height: 100px;overflow: hidden;">
+                    <ul id="lrclist" style="transform: translateY(64px);display: inline-block;color: #eaca9d;font-size: 14px;">
+                    </ul>                   
+                </div>
+            </div> -->
+            <div class="btn  animated pulse infinite">
+                <!-- <img src="images/xiu_btn.png" alt=""> -->
+                <button>祖国祝福</button>
+            </div>
+            <div class="zhezhaoceng hide">
+                <div class="kuang2">
+                    <img src="images/biankuang.png" alt="">
+                </div>
+                <p class="zhezhao_text1 animated bounceIn">已成功为祖国点赞</p>
+                <!-- <p class="zhezhao_text2 animated bounceIn">你是第 <span> 345783 </span>  位为祖国点赞</p> -->
+                <div class="queren animated bounceInLeft">
+                    <img src="images/queren.png" alt="">
+                </div>
+                <!--邀请朋友修改为领取优惠券 -->
+                <div class="invite animated bounceInRight">
+                    <img src="images/invite_btn1.png" alt="">
+                </div>
+            </div>
+            
+
+    </div>
+
+
+    <!-- 分享提示页 -->
+    <div class="fenxiang_Page hide">
+        <img src="images/fenxiang.png" alt="">
+    </div>
+    <!-- 写祝福页 -->
+    <div class="wishPage hide">
+     
+          <img class="bg" src="images/wishPageBg.png" alt="">
+    
+      <div class="zhuangshi">
+            <img src="images/diandian1.png" alt="">
+            <img src="images/diandian2.png" alt="">
+     </div>
+        <div class="title">
+            <div class="text_congratulation">
+                    <img src="images/jianguo_text.png" alt="">
+            </div>
+            <div class="seventy">
+                    <div class="seven animated fadeInDown">
+                        <img src="images/seventy.png" alt="">
+                    </div>
+                    <div class="zhou animated fadeInDown">
+                        <img src="images/index_zhou.png" alt="">
+                    </div>
+                    <div class="nian animated fadeInDown">
+                        <img src="images/index_nian.png" alt="">
+                    </div>
+            </div>
+            <div class="songzhufu subtitle animated fadeInDown">
+                    <img src="images/xiangzhuguo_text.png" alt="">
+            </div>
+        </div>
+        <div class="stars">
+            
+            <img class="star star1" src="images/star.png" alt="">
+            <img class="star star2" src="images/star.png" alt="">
+            <img class="star star3" src="images/star.png" alt="">
+            <img class="star star4" src="images/star.png" alt="">
+            <img class="star star5" src="images/star.png" alt="">
+            
+            <div class="rectangle">
+                
+            </div>
+
+            <img class="star star6" src="images/star.png" alt="">
+            <img class="star star7" src="images/star.png" alt="">
+            <img class="star star8" src="images/star.png" alt="">
+            <img class="star star9" src="images/star.png" alt="">
+            <img class="star star10" src="images/star.png" alt="">
+        
+        </div>
+        <p class="choose">请选择下面的祝福语:</p>
+        <ul>
+            <li><span>A</span><span class="text greetingTemp"> 祝愿祖国越来越强大。祝愿祖国越来越强。</span></li>
+            <li><span>B</span><span class="text greetingTemp"> 祝愿祖国越来越强大。祝愿祖国越来越强。</span></li>
+            <li><span>C</span><span class="text greetingTemp"> 祝愿祖国越来越强大。祝愿祖国越来越强。</span></li>
+            <!-- <li><span>D</span><span class="text"> 祝愿祖国越来越强大。祝愿祖国越来越强。</span></li> -->
+            <li><span>D</span><input id="li_in" type="text" placeholder="请输入祝福语（19个字符以内...）"></li>
+        </ul>
+        <!-- <textarea name="" id="textarea" placeholder="填写你的祝福...   (70字以内)"></textarea>
+        <div class="name">
+                署名：<input type="text">
+        </div> 
+        <div class="date">
+            日期：<span class="years">2019</span>年<span class="month">5</span>月<span class="day">8</span>日
+        </div> -->
+        <div class="btn  animated pulse infinite">
+            <img src="images/shengcheng_btn.png" alt="">
+        </div>
+
+       
+    </div>
+
+    <!-- 青年才俊秀 -->
+    <div class="wishShow hide">
+     
+            <img class="bg" src="images/wishShowBG.png" alt="">
+      
+        <div class="zhuangshi">
+              <img src="images/diandian1.png" alt="">
+              <img src="images/diandian2.png" alt="">
+       </div>
+        <div class="title">
+            <div class="text_congratulation">
+                    <img src="images/jianguo_text.png" alt="">
+            </div>
+            <div class="seventy">
+                    <div class="seven animated fadeInDown">
+                        <img src="images/seventy.png" alt="">
+                    </div>
+                    <div class="zhou animated fadeInDown">
+                        <img src="images/index_zhou.png" alt="">
+                    </div>
+                    <div class="nian animated fadeInDown">
+                        <img src="images/index_nian.png" alt="">
+                    </div>
+            </div>
+            <div class="songzhufu subtitle animated fadeInDown">
+                    <img src="images/xiangzhuguo_text.png" alt="">
+            </div>
+        </div>
+        <div class="stars">
+            
+            <img class="star star1" src="images/star.png" alt="">
+            <img class="star star2" src="images/star.png" alt="">
+            <img class="star star3" src="images/star.png" alt="">
+            <img class="star star4" src="images/star.png" alt="">
+            <img class="star star5" src="images/star.png" alt="">
+            
+            <div class="rectangle">
+                
+            </div>
+
+            <img class="star star6" src="images/star.png" alt="">
+            <img class="star star7" src="images/star.png" alt="">
+            <img class="star star8" src="images/star.png" alt="">
+            <img class="star star9" src="images/star.png" alt="">
+            <img class="star star10" src="images/star.png" alt="">
+        
+        </div>
+        <div class="content">
+            <ul style="list-style:none" id="marquee">
+                <!-- <li v-for="(item,indx) in congratulationText" :key="indx">{{item}}</li> -->
+                <!-- <li>
+                    <p class="text">太阳从东方升起，希望从东方升起，巨龙从东方升起，中国从东方崛起。</p>
+                    <p class="name">————  红一</p>
+                </li> -->
+                <!-- <li>
+                    <p class="text">青春和祖国一起闪光，光荣与梦想共同创造。祝共和国生日快乐！</p>
+                    <p class="name">————  红二</p>
+                </li>
+                <li>
+                    <p class="text">我们就是中国，中国就是我们。我们勇敢地承担起自己的使命，祝祖国更加美好！</p>
+                    <p class="name">————  红三</p>
+                </li>
+                <li>
+                    <p class="text">黄河孕育了华夏民族，长江见证了炎黄历史。伟大的祖国，我为你自豪！</p>
+                    <p class="name">————  名字</p>
+                </li>
+                <li>
+                    <p class="text">太阳从东方升起，希望从东方升起，巨龙从东方升起，中国从东方崛起。</p>
+                    <p class="name">————  红二</p>
+                </li>
+                <li>
+                    <p class="text">青春和祖国一起闪光，光荣与梦想共同创造。祝共和国生日快乐！</p>
+                    <p class="name">————  名字</p>
+                </li>
+                <li>
+                    <p class="text">我们就是中国，中国就是我们。我们勇敢地承担起自己的使命，祝祖国更加美好！</p>
+                    <p class="name">————  红三</p>
+                </li>
+                <li>
+                    <p class="text">黄河孕育了华夏民族，长江见证了炎黄历史。伟大的祖国，我为你自豪！</p>
+                    <p class="name">————  名字</p>
+                </li> -->
+               
+            </ul>
+        </div>
+          <!-- <textarea name="" id="textarea" placeholder="填写你的祝福...   (70字以内)"></textarea> -->
+          <!-- <div class="name">
+                  署名：<input type="text">
+          </div>  -->
+          <!-- <div class="date">
+              日期：<span class="years">2019</span>年<span class="month">5</span>月<span class="day">8</span>日
+          </div> -->
+          <div class="text2 animated" >
+            <img src="images/index_text2.png" alt="" >
+          </div>
+          <div class="btn  animated pulse infinite">
+            <!-- <img src="images/xiu_btn.png" alt=""> -->
+            <button>回到首页</button>
+          </div>
+        
+         
+      </div>
+    <!-- 海报页 -->
+    <div class="posterPage hide">
+       <img class="posterPage_bg" src="images/wish_bg.png" alt="">
+       <!--
+           <div class="zhebu">
+           <img src="images/zhebu.png" alt="">
+       </div>
+       -->
+       <div class="text">
+           <img src="images/poster_text.png" alt="">
+       </div>
+       <!-- 邀请好友 -->
+       <!--
+           <div class="invite_btn">
+                <button>邀请好友</button>
+            </div>
+       -->
+       <!-- <div class="look_btn">
+           <img src="images/poster_look.png" alt="">
+       </div> -->
+       <div class="wishShowBtn">
+            <button>青年力量</button>
+        </div>
+        <div class="backIndex" >
+            <button>回到首页</button>
+        </div>
+    </div>
+
+    <!-- 绣国旗热度榜 -->
+    <!-- <div class="guoqi_Page hide">
+        <div class="bg">
+            <img src="images/rebang_bg.png" alt="">
+        </div>
+        <div class="title">
+            <img src="images/guoqi_title.png" alt="">
+        </div>
+
+     <div class="stars">
+            
+            <img class="star star1" src="images/star.png" alt="">
+            <img class="star star2" src="images/star.png" alt="">
+            <img class="star star3" src="images/star.png" alt="">
+            <img class="star star4" src="images/star.png" alt="">
+            <img class="star star5" src="images/star.png" alt="">
+            
+            <div class="rectangle">
+                
+            </div>
+
+            <img class="star star6" src="images/star.png" alt="">
+            <img class="star star7" src="images/star.png" alt="">
+            <img class="star star8" src="images/star.png" alt="">
+            <img class="star star9" src="images/star.png" alt="">
+            <img class="star star10" src="images/star.png" alt="">
+        
+        </div> 
+
+        <div class="center">
+                <div class="map">
+                       <div id="container" style="height: 550px;"></div>
+                 </div>
+            <div class="guoqi_btn">
+                <img src="images/guoqi_btn.png" alt="">
+            </div>
+            
+        </div>
+
+
+        <div class="btn  animated pulse infinite">
+            <button>爱国企业绣</button>
+        </div>
+    </div> -->
+
+    <!-- 祝福热度榜 -->
+    <div class="zhufu_Page hide">
+        <div class="bg">
+            <img src="images/rebang_bg.png" alt="">
+        </div>
+        <div class="title">
+            <img src="images/zhufubang_title.png" alt="">
+        </div>
+
+        <div class="stars">
+                
+                <img class="star star1" src="images/star.png" alt="">
+                <img class="star star2" src="images/star.png" alt="">
+                <img class="star star3" src="images/star.png" alt="">
+                <img class="star star4" src="images/star.png" alt="">
+                <img class="star star5" src="images/star.png" alt="">
+                
+                <div class="rectangle">
+                    
+                </div>
+
+                <img class="star star6" src="images/star.png" alt="">
+                <img class="star star7" src="images/star.png" alt="">
+                <img class="star star8" src="images/star.png" alt="">
+                <img class="star star9" src="images/star.png" alt="">
+                <img class="star star10" src="images/star.png" alt="">
+            
+        </div> 
+        <div class="center">
+            <div class="map">
+                    <div id="container2" style="height: 550px;"></div>
+            </div>
+            <!-- <div class="zhufubang_btn">
+                <img src="images/zhufubang_btn.png" alt="">
+            </div> -->
+       
+        </div>
+        
+        <!--<div class="btn  animated pulse infinite">
+            <button>爱国企业祝福</button>
+        </div>-->
+        <div class="btn animated pulse infinite">
+                <img src="images/enterprise_btn.png" alt="">
+         </div>
+
+
+    </div>
+
+    <!-- 主板单位页 -->
+
+    <!-- <div class="corporation_Page hide">
+        <div class="bg">
+            <img src="images/loading_bg.png" alt="">
+        </div>
+        <div class="zhuangshi">
+            <img src="images/diandian1.png" alt="">
+            <img src="images/diandian2.png" alt="">
+        </div>
+
+        <div class="text2 animated" style="position:absolute;z-index:100;width: 100%;top: 42%;">
+            <img src="images/index_text2.png" alt="" style="width: 58%;margin:0 auto;">
+        </div>
+
+    </div> -->
+  
+ <!-- 音乐 -->
+
+ <div class="broadcast-icon" id="playButton">
+
+        <img src="images/play.png" alt="">
+
+ </div> 
+
+ <audio id="bgsound" preload='auto' src="https://ossfiles.xingkec.com/zhongguo_70/xiuhongqi.mp3" loop="loop"></audio>
+
+
+  <!-- 生成海报提示 -->
+  <div class="poster hide">
+    <div class="poster_icon">
+        <img src="images/shengchenghaibao.png" alt="">
+        <div class="poster_text">
+            正在生成海报<span class="dian1">.</span><span class="dain2">.</span><span class="dain3">.</span>
+        </div>
+    </div>
+</div>
+
+
+    <!--验证弹窗-->
+
+<div class="write-popup hide">
+
+        <div class="write-popup-box">
+    
+            <p class="write-popup-text">字数请不要超过70字</p>
+    
+            <p class="write-popup-close">确认</p>
+    
+        </div>
+    
+    </div>
+</body>
+</html>
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+    //console.log(returnCitySN["cip"]);
+    window.ip = returnCitySN["cip"];
+</script>
+<script src="js/html2canvas.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/exif.js"></script>
+<!-- <script src="js/proxy.js"></script> -->
+<script src="js/index.js"></script>
+<script src="js/map.js"></script>
+
+
+<script>
+var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500684989");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script>
+
+<!-- <script>
+    function setditu(id){
+
+    Highcharts.setOptions({
+        lang: {
+                drillUpText: '< 返回 “{series.name}”'
+        }
+    });
+ 
+    var width = $('#'+id).css("width");
+    width = parseInt(width.substring(0,width.indexOf("px")));
+    //console.log(width);
+    var map = null,
+    geochina = 'https://data.jianshukeji.com/jsonp?filename=geochina/';
+    $.getJSON(geochina + 'china.json&callback=?', function(mapdata) {
+        var data = [];
+        // 随机数据
+        Highcharts.each(mapdata.features, function(md, index) {
+                var tmp = {
+                    name: md.properties.name,
+                    value: Math.floor((Math.random() * 100) + 1) // 生成 1 ~ 100 随机值
+                };
+                if(md.properties.drilldown) {
+                    tmp.drilldown = md.properties.drilldown;
+                }
+                data.push(tmp);
+        });
+        var count = 0;
+        var preCity = '';
+        var currentCity = '';
+        map = new Highcharts.Map(id, {
+                chart: {
+                    events: {
+                            drilldown: function(e) {
+                                //console.log(e);
+                                if(count == 0 && preCity == ''){//初始情况，阻止下钻
+                                    count ++;
+                                    preCity = e.point.name;
+                                    //console.log(count,preCity,currentCity);
+                                    return
+                                }
+                                if(count == 1 && preCity != ''){//避免出现第一次点击了湖南省，第二次点击广东省，防止直接下钻广东省，保证同一个省点击两次才开始下钻
+                                    currentCity = e.point.name;
+                                    if(currentCity !== preCity){
+                                        preCity = currentCity;
+                                        //console.log(count,preCity,currentCity);
+                                        return
+                                    }
+                                }
+                                
+
+                                this.tooltip.hide();
+                                // 异步下钻
+                                if (e.point.drilldown) {
+                                        var pointName = e.point.properties.fullname;
+                                        // map.showLoading('下钻中，请稍后...');
+                                        // 获取二级行政地区数据并更新图表
+                                        $.getJSON(geochina +   e.point.drilldown + '.json&callback=?', function(data) {
+                                            data = Highcharts.geojson(data);
+                                            Highcharts.each(data, function(d) {
+                                                    if(d.properties.drilldown) {
+                                                        d.drilldown = d.properties.drilldown;
+                                                    }
+                                                    d.value = Math.floor((Math.random() * 100) + 1); // 生成 1 ~ 100 随机值
+                                            });
+                                            map.hideLoading();
+                                            map.addSeriesAsDrilldown(e.point, {
+                                                    name: e.point.name,
+                                                    data: data,
+                                                    // dataLabels: {
+                                                    //     enabled: true,
+                                                    //     format: '{point.name}'
+                                                    // }
+                                            });
+                                            map.setTitle({
+                                                    text: pointName
+                                            });
+                                        });
+                                }
+                                //
+                                count = 0;
+                                preCity = '';
+                                
+                            },
+                            drillup: function() {
+                                map.setTitle({
+                                        text: '中国'
+                                });
+                            }
+                    },
+
+                },
+                title: {
+                    text: '中国地图',
+                    
+                },
+                subtitle: {
+                    useHTML: true,
+                    text: ''
+                },
+    
+            //设置功能
+                mapNavigation: {
+                    enabled: true,
+                    enableTouchZoom: true ,// 在开启导航器的情况下关闭移动端手势操作
+                    buttonOptions: {
+                            verticalAlign: 'bottom'
+                    }
+                },
+    
+                tooltip: {
+                    useHTML: true,
+                    headerFormat: '<table ><tr><td>{point.name}</td></tr>',
+                    pointFormat: '<tr><td>全称</td><td>{point.properties.fullname}</td></tr>' +
+                    // '<tr><td>行政编号:</td><td>{point.properties.areacode}</td></tr>' +
+                    // '<tr><td>父级:</td><td>{point.properties.parent}</td></tr>' +
+                    '<tr><td>热度:</td><td>{point.value}</td></tr>',
+                           
+                    footerFormat: '</table>',
+    
+    
+                    //
+                    positioner: function () {
+                        return { x: 0.2 * width, y: 250 };
+                    }
+                },
+    
+            //这里是下条栏数据显示
+            //     colorAxis: {
+            //         min: 0,
+            //         minColor: 'Beige',
+            //         maxColor: 'PowDerBlue',
+            //         labels:{
+            //             style:{
+                //                "background color":"Ivory", "color":"LightSkyBlue","fontWeight":"bold"
+            //             }
+            //         }
+            //     },
+    
+    
+                colorAxis: {
+                    min: 0,
+                    max: 100,
+                    minColor: 'rgb(255,255,255)',
+                    maxColor: '#cc1c15',
+                    labels:{
+                                    style:{
+                                        "background color":"#996544", "color":"#996544","fontWeight":"bold"
+                                    }
+                                }
+                },
+            //显示地图省份
+            // plotOptions: {
+            //     series: {
+            //         dataLabels: {
+            //             enabled: true,
+            //             allowOverlap: true,//是否显示全部省 自治区 
+            //             // format: '{point.properties.fullname}',
+            //             format: '{point.properties.name}',
+            //             style:{
+            //                 "background color":"#996544", "color":"#996544", "fontSize": "10px", "fontWeight": "400", "textOutline": "1px 1px contrast"
+            //             }
+            //             //map.showLoading('下钻中，请稍后...')
+            //         }
+            //     }
+            // },
+            series: [{
+                    data: data,
+                    mapData: mapdata,
+                    joinBy: 'name',
+                    name: '中国地图',
+                    states: {
+                            hover: {
+                                color: 'Turquoise'
+                            }
+                    },
+ 
+                }]
+    
+        });
+    });
+}
+	
+	setditu("container2");
+ </script> -->
+
+ 
