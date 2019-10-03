@@ -1340,6 +1340,16 @@ function sendMessage(Content) {
         //合成图片
         $("#hecheng_textarea").html(Content);
         $("#user_name").html(user_name);
+        // //生成二维码
+        // new QRCode(document.getElementById("code"), 'https://dr.beilequan.com/?Recommend_uid=' + uid); // 设置要生成二维码的链接
+
+        var qrcode = new QRCode(document.getElementById("code"), {
+            width: 104, //设置宽高
+            height: 104
+        });
+        qrcode.makeCode('https://dr.beilequan.com/?Recommend_uid=' + uid);
+
+
         // 执行合成图片函数 screenshot.init('id名', function(img) { });
         screenshot.init('hechengPage', function(img) {
             //console.log(img);

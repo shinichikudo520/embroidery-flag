@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- <script src="js/jquery-1.8.2.min.js"></script> -->
     <script src="js/jquery-1.8.3.min.js"></script>
-
+    <script src="js/qrcode.min.js"></script>
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script>
+        //console.log(returnCitySN["cip"]);
+        window.ip = returnCitySN["cip"];
+    </script>
     <script>
         var uid;
         //在所有事件之前完成code的获取
@@ -27,10 +32,9 @@
             });
         }else{//没有code，去获取授权
             // console.log('没有code，去授权...');
-            window.location.href = 'http://dr.beilequan.com/api/r_oauth/';
+            window.location.href = 'http://dr.beilequan.com/api/r_oauth/?ip_out='+ip;
         }
     </script>
-
     <script src="js/highmaps.js"></script>
     <script src="js/drilldown.js"></script>
     <script src="js/exporting.js"></script>
@@ -98,7 +102,11 @@
          <img src="images/hecheng_text.png" alt="">
      </div>
      <div class="erweima">
-         <img src="images/erweima.png" alt="">
+         <!--
+             <img src="images/erweima.png" alt="">
+         -->
+        <div id="code"> <!-- 保存二维码的容器 -->
+        </div>
      </div>
    </div>
 
@@ -1005,10 +1013,10 @@
     </div>
 </body>
 </html>
-<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+
 <script>
-    //console.log(returnCitySN["cip"]);
-    window.ip = returnCitySN["cip"];
+    
 </script>
 <script src="js/html2canvas.js"></script>
 <script src="js/hammer.js"></script>
@@ -1016,6 +1024,7 @@
 <!-- <script src="js/proxy.js"></script> -->
 <script src="js/index.js"></script>
 <script src="js/map.js"></script>
+
 
 
 <script>
