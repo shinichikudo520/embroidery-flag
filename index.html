@@ -20,19 +20,32 @@
         //在所有事件之前完成code的获取
         var href = window.location.href;
         var codeIndex = href.indexOf('code');
+        var Recommend_uid_index = href.indexOf('Recommend_uid');
+        var Recommend_uid =  Recommend_uid_index > -1 ? href.substring(Recommend_uid_index+14):0;
+
         if(codeIndex > -1){//已有code，已授权
             //console.log('有code了...');
             //返回携带code的url举例：https://xxxxx.com/wap/payOrder.html/?code=abc677adaduiadi7838&state=STATE
             //& 符号的下标
             var andSymbolIndex = href.indexOf('&');
             var code = href.substring(codeIndex+5,andSymbolIndex);
+            var url_ip_index = href.indexOf('ip');
             var api = 'https://dr.beilequan.com/api/get_userinfo/?code='+code;
             $.get(api,res=>{
                 uid = res.uid;
             });
+            if(url_ip_index < 0){//url上没有携带ip
+                window.location.href += ('&ip='+ip);
+            }else{//url上携带了ip
+                var url_ip = href.substring(url_ip_index+3);
+                if(url_ip != ip){//匹配不成功，不是同一个人，通过别人转发url进入,模拟通过二维码扫描进入
+                    window.location.href = 'https://dr.beilequan.com/?Recommend_uid=' + uid;
+                }
+            }
+            
         }else{//没有code，去获取授权
             // console.log('没有code，去授权...');
-            window.location.href = 'http://dr.beilequan.com/api/r_oauth/?ip_out='+ip;
+            window.location.href = 'http://dr.beilequan.com/api/r_oauth/?ip_out='+ip+'&Recommend_uid='+Recommend_uid;
         }
     </script>
     <script src="js/highmaps.js"></script>
