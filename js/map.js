@@ -23,7 +23,7 @@ function getProvinceNum() {
         provinceAll.forEach(item => {
             provinceData[item.province_name] = item.province_count;
         });
-        //console.log('省级热力图数据',provinceData);
+        console.log('省级热力图数据', provinceData);
 
         chinaData = provinceData; //更新省级图数据
 
