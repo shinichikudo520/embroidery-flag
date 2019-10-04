@@ -38,7 +38,7 @@
                 window.location.href += ('&ip='+ip);
             }else{//url上携带了ip
                 var url_ip = href.substring(url_ip_index+3);
-                if(url_ip != ip){//匹配不成功，不是同一个人，通过别人转发url进入,模拟通过二维码扫描进入
+                if(url_ip != ip){//匹配不成功，不是同一个人，通过别人转发url的方式进入项目,再次重定向模拟通过二维码扫描进入
                     window.location.href = 'https://dr.beilequan.com/?Recommend_uid=' + uid;
                 }
             }
